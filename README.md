@@ -1,2 +1,1 @@
-# relogio-tematico-em-JS
-Este é meu primeiro projeto em JavaScript. O programa é sobre um relógio digital temático que altera sua cor tema de acordo com o horário do dia, além de fornecer ao usuário a informação de em qual dia da semana ele está.
+
