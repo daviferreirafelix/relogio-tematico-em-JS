@@ -3,7 +3,7 @@ function relogio() {
   var data = new Date();
   var relogio = document.getElementById("relogio");
 
-  relogio.innerHTML = data.toLocaleTimeString('pt-BR');
+  relogio.innerHTML = data.toLocaleTimeString("pt-BR");
 }
 
 window.setInterval("relogio()", 1000); // método que REPETE a função do relógio, ou seja, o atualiza a cada 1000ms.
@@ -11,9 +11,34 @@ window.setInterval("relogio()", 1000); // método que REPETE a função do reló
 //fução para atualizar o DIA DA SEMANA
 function diaSemana() {
   var data = new Date();
+  semana = data.getDay();
   var dia = document.getElementById("dia");
 
-  dia.innerHTML = (`Hoje é dia ${data.toLocaleDateString('pt-BR')}`)
+  switch (semana) {
+    case 0:
+      semana = "Domingo";
+      break;
+    case 1:
+      semana = "Segunda-feira";
+      break;
+    case 2:
+      semana = "Terça-feira";
+      break;
+    case 3:
+      semana = "Quarta-feira";
+      break;
+    case 4:
+      semana = "Quinta-feira";
+      break;
+    case 5:
+      semana = "Sexta-feira";
+      break;
+    case 6:
+      semana = "Sábado";
+      break;
+  }
+
+  dia.innerHTML = `Hoje é dia ${data.toLocaleDateString("pt-BR")}, ${semana}`;
 }
 
 // algaritimo para SAUDAR o usuário
