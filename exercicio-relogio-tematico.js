@@ -1,51 +1,19 @@
 // função para o RELÓGIO AUTOMÁTICO
 function relogio() {
   var data = new Date();
-  var horas = data.getHours();
-  var minutos = data.getMinutes();
-  var segundos = data.getSeconds();
   var relogio = document.getElementById("relogio");
 
-  relogio.innerHTML = horas + ":" + minutos + ":" + segundos;
+  relogio.innerHTML = data.toLocaleTimeString('pt-BR');
 }
 
-window.setInterval("relogio()", 1000); // método que REPETE a função do relógio, ou seja, o atualiza a cada 1s.
+window.setInterval("relogio()", 1000); // método que REPETE a função do relógio, ou seja, o atualiza a cada 1000ms.
 
 //fução para atualizar o DIA DA SEMANA
 function diaSemana() {
   var data = new Date();
-  var diaSemana = data.getDay();
   var dia = document.getElementById("dia");
 
-  switch (diaSemana) {
-    case 0:
-      dia.innerHTML = "Hoje é Domingo!";
-      break;
-
-    case 1:
-      dia.innerHTML = "Hoje é Segunda-feira!";
-      break;
-
-    case 2:
-      dia.innerHTML = "Hoje é Terça-feira!";
-      break;
-
-    case 3:
-      dia.innerHTML = "Hoje é Quarta-feira!";
-      break;
-
-    case 4:
-      dia.innerHTML = "Hoje é Quinta-feira!";
-      break;
-
-    case 5:
-      dia.innerHTML = "Hoje é Sexta-feira!";
-      break;
-
-    case 6:
-      dia.innerHTML = "Hoje é Sábado!";
-      break;
-  }
+  dia.innerHTML = (`Hoje é dia ${data.toLocaleDateString('pt-BR')}`)
 }
 
 // algaritimo para SAUDAR o usuário
