@@ -46,13 +46,13 @@ let data = new Date();
 let hora = data.getHours();
 let saudacao = document.getElementById("saudacao");
 
-if (hora > 00 && hora < 5) {
+if (hora >= 00 && hora <= 5) {
   saudacao.innerHTML = "Boa madrugada!";
-} else if (hora > 5 && hora < 12) {
+} else if (hora >= 5 && hora <= 12) {
   saudacao.innerHTML = "Bom dia!";
-} else if (hora > 12 && hora < 18) {
+} else if (hora >= 12 && hora <= 18) {
   saudacao.innerHTML = "Boa tarde!";
-} else if (hora > 18) {
+} else if (hora >= 18) {
   saudacao.innerHTML = "Boa noite!";
 }
 
@@ -62,16 +62,16 @@ function tema() {
   var hora = data.getHours();
   var tema = document.getElementById("tema");
 
-  if (hora > 23 && hora < 5) {
+  if (hora >= 23 && hora <= 5) {
     tema.style.backgroundColor = "black";
     tema.style.color = "white";
-  } else if (hora > 5 && hora < 12) {
+  } else if (hora >= 5 && hora <= 12) {
     tema.style.backgroundColor = "#f7f7a0";
     tema.style.color = "black";
-  } else if (hora > 12 && hora < 18) {
+  } else if (hora >= 12 && hora <= 18) {
     tema.style.backgroundColor = "#ffc400";
     tema.style.color = "black";
-  } else if (hora > 18) {
+  } else if (hora >= 18) {
     tema.style.backgroundColor = "#000";
     tema.style.color = "white";
   }
